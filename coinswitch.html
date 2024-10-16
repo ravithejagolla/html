@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coinswitch</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+            width: 100%;
+            background-color: #b1bee0;
+            padding: 20px;
+            border-radius: 30px;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            margin: 0 75px;
+            height: 10vh;
+        }
+
+        nav img {
+            height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .nav-links div {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        nav button {
+            background-color: #b0e60e;
+            border-radius: 5px;
+            border: none;
+            font-size: 15px;
+            padding: 15px 30px;
+            cursor: pointer;
+        }
+
+        #child1 {
+            display: flex;
+            align-items: center;
+            margin: 10vh 0 3vh 20vh;
+        }
+
+        #child1 div p {
+            padding-left: 15px;
+            line-height: 80%;
+        }
+
+        #child2 {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            color: black;
+            font-size: 80px;
+            margin-top: 30px;
+            margin-left: 20vh;
+        }
+
+        #child3 {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            color: #6a91fb;
+            font-size: 80px;
+            margin-left: 20vh;
+        }
+
+        #child4 {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            max-width: 70%;
+            color: rgb(56, 54, 54);
+            font-size: 30px;
+            margin-top: 60px;
+            margin-left: 20vh;
+        }
+
+        #child5 {
+            margin-top: 50px;
+            margin-left: 20vh;
+        }
+
+        #child5 button {
+            height: 50px;
+            width: 140px;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav img {
+                margin-left: 0;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+        #child1>img{
+            background-color:transparent;
+            margin: 0;
+            
+        }
+        .no-border{
+            border:none;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="https://coinswitch.co/_next/static/media/logo.01525825.svg" alt="">
+            <div class="nav-links">
+                <div>
+                    <p>Products
+                        <select>
+                            
+                        </select>
+                    </p>
+        
+                </div>
+                <p>Coins</p>
+                <p>Ventures</p>
+                <p>Blog</p>
+                <div>
+                    <p>Company</p>
+                    <select>
+
+                    </select>
+                </div>
+                <button>Login To Pro</button>
+            </div>
+        </nav>
+    </div>
+    <div class="container2">
+        <div id="child1">
+            <img src="data:image/png;base64,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"  class="no-border"height="50px" alt="logo" />
+            <div>
+                <p style="font-size: 25px; font-weight: 600;">coin<span style="color: #514ED8;">switch</span></p>
+                <p style="font-size: 30px; font-weight: bold;">ventures</p>
+            </div>
+        </div>
+        <div id="child2">Your Innovation</div>
+        <div id="child3">Our Fuel</div>
+        <div id="child4">
+            CoinSwitch Ventures invests in the most promising Web3 and blockchain
+            projects in India. Does that sound like you?
+        </div>
+        <div id="child5"><button>Apply Now</button></div>
+    </div>
+</body>
+
+</html>
