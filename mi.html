@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miStore</title>
+    <style>
+        #container{
+            width: 100%;
+            height:auto;
+            border:5px solid black;
+            display:block;
+            justify-content: space-around;
+            
+        }
+        .taskbar{
+            width: 100%;
+            height: 50px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            display: flex;
+           
+        }
+        img{
+            width: 45px;
+            height: 45px;
+        }
+        .first{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            column-gap: 30px;
+            padding-left: 5px;
+            margin-right:40px;
+        }
+        h2{
+            color: red;
+           margin: 0;
+           margin-top: 10px;      
+        }
+        .first>img{
+            margin: 0;
+            margin-bottom: 2px;
+            margin-top: 3px;
+        }
+        .second{
+            width: 30%;
+            height: 100%;
+            
+            display: flex;
+            column-gap: 30px;
+            padding-left:250px;
+            
+        }
+        #main{
+            width: 50%;
+            height: auto;
+          
+            margin: auto;
+            margin-top: 10px;
+            
+            
+
+            
+        }
+        .stack{
+
+            width: 100%;
+            height: 200px;
+            
+            display: flex;
+            column-gap: 20px;
+            
+        }
+        .stack>div{
+            width: 150px;
+            height: 200px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+           
+        }
+        .buttonview{
+            width:70px;
+            height:auto;
+            border: 1px solid red;
+            background-color: rgb(179, 174, 174);
+            color: rgb(238, 48, 48);
+            text-align: center;
+            border-radius: 5px;
+            margin-top: -25px;
+            margin-left: 2px;
+            
+        }
+        .price{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content:space-between;
+            margin-top: 15px;
+            
+            flex-wrap:nowrap;
+        }
+        .price>div>p{
+            margin: 0;
+            margin-top: 20px;
+            padding-top: 25px;
+        }
+        .price>div>img{
+            width: 70px;
+            height:auto;
+        }
+        .extra{
+            width:100%;
+            height:auto;
+            background-color: rgb(245, 216, 216);
+            display: flex;
+            justify-content: space-between;
+        }
+        .extra>div{
+            width: 200px;
+            height: 100%;
+            padding-left: 20px;
+        }
+        .extra>div>p{
+            margin-top: 3px;
+        }
+        button{
+          
+            
+            padding: 5px;
+            margin: 0px;
+            margin-top: -200px;
+            margin-left: 50px;
+            border-radius: 5px;
+            background-color: black;
+            color: aliceblue;           
+            
+        }
+        button:hover{
+            background-color: green;
+            cursor: pointer;
+        }
+        .extra>div>img{
+            width: 150px;
+            height: 150px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="taskbar"> 
+         <div class="first">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA8FBMVEX////+ZgH7YwD//v/7//79XgD/eSv6//j76+T8//r/YwD9/fn8ejH6aAX/9+////395df8xaD4///5j0373Mb8gjv6XwD7Zgjz///+iVL+WgD4YAD9spD5nWX//vb3aQDzYgD8bxb8jVH/4M/+gjf//vL/cRj88eb+z7r/xKn8vaD8upj9qX/3oW78ll38j1n5roL7y6v5mE/+wZf4tov42Mj46db7uY/5onz507r4mWD4eij71rX0rXj3gUH5bR/248n4djr0o2r+yqD9mmr9y7n3hDz9qnr83r/90KT58uDsfTbxxKf/nFP9uIryfQCGZ313AAAK+0lEQVR4nO2dC1vayBqAc5mBZoYwOEqGJpIQKqXVQqVaW6oL2u3Rlu055///mzODclEZGy1fgj3z9tndrgbIy9wnX75YlsFgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAY/j9hnouY5XJkIST/t9zp1l69ebt/sPuu1+y/b7fbLxe8f9//0rw6PDjYGgxr3Y6nXu/JF3qu5XmUuQWraECUUWpxbnVeDbd67VJqO60okH+iIMDEmUOmYEWI1a9sMd77cDjY6TILlZHEYqxomZUgznm1dtTca4XyzIV0sSWEqH8L+zZCiCTxpwiHJH4gbcNo3D/+2I3LjG+WoTobl8q/0JOjfhrhoCWUgPD9xJ/+R0g9WU7Cv2NpO8JRv/AFsadHiYjIV7d3X1UtZLnM2hBNFjM39rh18mmUYHJX4gkQHJY+DzvcYrLaF203BSHK6aDtY3G/Mj4JVfZ+5WAybZEbgIto5yBtJaoDWYefKkQisN3Cza4XF23HkEsRPUoD2cRkc3LWYygbpZ0QkgRhb2J5avihxSlSqzHcw2sSuydqR/5xGdGYFVdZGZ98CZy1NL4VqHYdnu5wVODYgc7ScDoYwCBrq+2Ef8W8mOZIXVT+K8D3Brm1E45kr+oWMI9ruNV+SHx4Q0HG51YD5V9T48kI+6mA6mYWkISIH3JQylePco9eYGddw8ODpFIxGMipaq5jBnInF1EeetcQv3VmNXLtb3jcXtMEJhO+TVpq1MjRkDZDX31wXjiCpOe52THmoeMQbBDUEVWYx/IZ+1HcGEYkzbOWKkTUk8uYXBQRmoxxDuPgXUM7fGPlYxg3mliu1/NWdIQoTXIwZBbiwyD3RngNPpTTN2hD6ViuB0ExhnZQg5/ZyE/YwnCriV+A2x64IqK0lHcvuiAJzxrALZFx62dYmKDtk23GYefgjNNKcUUoiXaADS36Mf/ZzDL4cwy8GOYf4BeED1ONQcsQTVJSaBnaeMBB14loC69nX/vJONuAiyg1s+8HuU9Ib9Pyu2CCcsbGqglJizV0greAhgwNw4KboZy5NeEMEUVfcdGCtpPC9TSUsnqhw71C2LgGZmihbqtoQbUQ3gITZHxQ9HCvLuJhuIZI+XGehpoW75NT9W2DGLqNy9XN0HHETVzFw6j4hQd7KtGaH2rrN9TDqgs0r6EoXf2Rjp+QLHYqOuOhXdZUELH0Cq3hjgs0r2EdzbU0tSWtPe2lL8IJcBBhjHUX/AmZv7+fRNpuG/8txy0QQ1QLNd8/GZ9Xf0232629Gm4dNLdTIjXvl9H4hC4OHmqvi+ArTmFWUHJGoyudUubvFCGroSKn+omQrff291Rh3Jsd573Q9mqkzYECbdAn3YzGKXm/fvkURhmKqeUifnKc3nk7UqHzHsQtP2BYB6ulV7qN0uyGamMeIQ9JFdTt3a4TmQ0rFCg6A33QXbV/hOECz+VHoe+TpTP3UBZD2+7GQGvEvWidhog2pOJSrchsiE+ABL1xovnIpxl6buz1lzwyGwZnFkxfWhXZDFe3kXvn5CJL9jdLA3t2wwHQ5YuurZtI3TJkq6F0xXX4MmouRLLX0n0OU01r2QxlGa4oRSR70Ps/jfnO4j2zGx4AzdpqWDenvGPoxdX4LtXqqsky8ujpvDPNbrgLFHj6MdBt0tw27F5W6pV7XIxeftv9Vw15HqNzEVl5D3Hi+I80bHIQQetNoFuz3TasOdh37qLC81tRQC6HrEHnxSlH7jfhow2DPlA7fJvZkKyuzUStX8PmhHdmlYxZ6CRKbppidsM2UDt8G2UzPBEaQ7VItAX+2qDzwxnrpP5jDaNtoAul+5HmzLOW4ewEv9/qKE5nvWlmQ2cENPPeXZMh/nJrOLl8vGEdyPBdxlr6K0PH6SydIPoyGy6KN7zCumj8Bwzn34mYj3siPF/u7Y9nkR3ZDStVGMMe9h9pKESAg2swDmZ7OSIcLp/g/nM2JP3j3RmHh7MgDoE/Lb/t2+dsmEwas36do8bfN+esYvCWGMy2nIo3bOJsM++ldkjnoctMhRrNDu8vn+A89mETDLUfqTecTT7k/Gxh+H75bXc2yFC7R5ulDJ+H4RNq6coybG+q4W+1w4WhcLb/JMMVZfiHGT6zMrx/s7IxfG61dGPKECh6r7c5ZQhkeOVku/b0fNuhNNR95B/SDp9k+KzK8FB7m0XeZVgHaocHWHfhIu8yhNqn0ccH5204AtovHTzFEKSWQu15v3n8biJMGZJvFsylmeFTDCHKkHxDMIavtDu9eZfhOw7TDmtiQ8oQ7wJdP+xqk3zkXIZ4H+i2mW6yIWv8YMBhYjE66aas8aEMrbouijTvnmYHKoNE+wmGICN+DSgnD+ptSC1Nq0C5sdCx7rYuZTgPfrpl6NGbX1gILXaEt5cip6wdPDe8TpmocL0X2pUMKUFF0FpHgaYQyV4ZeSpsVEU+8fPFxdBOh17/2HPL/OjG0MfbDc+7Plgefjar+6RUjvn0YIRYfKI3bFtA81I01Bg6pDRZOu67M4udEl0+H5sbaHa3RkIulyo1+jHLRSgN54cjfq4Njic9BGRYnugzDfxTn3N5Og+dIqd7l3vXP90b7S2mC85ocfgoXaw6K/Wbo+t7l6n2s/AnqFQ1qKGL+vJtshz+tJjc+cS++aG9dAvCrcPJ4nCfELIIodJFO/j4rAG0xnfRRS6JoX5FeMI7MIbMuir+zi5Z0D6Fy1H7o8B8CjNSso1cBDPie/SkeENHBLsgdlPcTu65k1YoBmdgghR5/eIN7VYVzpDzfaxd5+eEcF6WwQxdxGrYfzgqDx68C5cXQ6466ajoMlTJ9+AMGUOHQcEt0dnzYDNE1py0WMNgF2oH44b4suCJGz6HTRCJUJFpomy1NiwDZ1HyqsWm/ggHVgdU0KW8RwpL16ZuZ4AbDK9hPJ7gNaXPf4Kgg4+ABdXMDV21ChswHB+2iipixCZJYbU0OoJNgzXjuJDuVI5SZNR5wt24j8crnxYzJpLWsAG0fXEHtFPMmNj6Sr188kHH6K9Q5J7zy8eVvBJ685jHI5Lk3aE6UQ7pWa9xXRdNxkR35zoU0VFuGcuZui5yHpE8notwg/w6w8N8c7Iz6wf2HV246dpJRNjM+dkIboMNWjnuZ4T/9nJ+hIeLXDTIb/YWfs3/yU8MudYwmT5uDBbf90m0m0ca7/uODX4+1mZZWBNqBkyCo2KehkRjZNEvwE/Ske8elWqabCm5WKKfY7jLUT6xBXG+VFGBD3ykyDrpYZWNDkZR4PqwuPJTMPXAiZ3LEEMMHI6D/f9UgaIQMxtOw0U6g3+i9ddVgpN31YbVKfgRiErQtbg37AtMZKNRnfvvFOc0EseRbyTw3ltZfpTBbeE/BsoQPzm4DCKnJX7nEYGJHGBFkiY4KvU+ljfi6Y43oLhTLvP4/NN2K8TOb5QhIU6Ao4t3wyqCSo34NORyinrM45xVh8eXdih7nkc/z1I9PzcIg/9+HnTLiKMNM7wNqg13v9VLQiWKkKjoGKFSnCbTFeVNO221WteBM5E8TB5nv754f/jjO9zl3XXC4mlc2ovz4c/9T+9679vTpFHj169fpwvG43GpUqmP2v3e8cHWm1fdsmdZnAPFWKybhpyEuLzhInnGLEYe1WY0pZ6qkNPjqPoHKuPjmpEDCFOPZJQLHlddVp0qcC+OY0o9BaXTVFhoyvXzkuVXIr8W+arNeACwwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgeK78D5KmJggfL6jgAAAAAElFTkSuQmCC" alt="mi">
+          <h2>store</h2>
+          <p>Phone</p>
+          <p>Tv & Smart House</p>
+          <p>Tablet</p>
+          <p>LifeStyle</p>
+         </div>
+         <div class="second">
+            <p>Discover</p>
+            <p>Support</p>
+            <img src="https://www.shutterstock.com/shutterstock/photos/1220721013/display_1500/stock-vector-magnify-icon-vector-eps-1220721013.jpg" alt="searchimage">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/jd-app-icon/shopping-cart-296.png" alt="cart">
+            <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="profile">
+         </div>
+        </div>
+        <div id="main">
+            
+            <div class="stack">
+                <div>
+                    <h3>Redmi Earphones</h3><br>
+                    <div class="buttonview">25% off</div>
+                    <div class="price">
+                        <div>
+                            <p>₹449</p>
+                            <s style="color: rgb(214, 218, 216);">₹599</s>
+                        </div>
+                        <div>
+                            <img src="https://m.media-amazon.com/images/I/513ugd16C6L.SL1500.jpg" alt="e1">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Mi Dual Driver-in ear Earphones</h3><br>
+                    <div class="buttonview">20% off</div>
+                    <div class="price">
+                        <div>
+                            <p>₹799</p>
+                            <s style="color: rgb(214, 218, 216);">₹999</s>
+                        </div>
+                        <div>
+                            <img src="https://m.media-amazon.com/images/I/51BFPdO37rL.SL1100.jpg" alt="e2">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Mi blutooth speaker(16W)</h3><br>
+                    <div class="buttonview">28% off</div>
+                    <div class="price">
+                        <div>
+                            <p>₹799</p>
+                            <s style="color: rgb(214, 218, 216);">₹999</s>
+                        </div>
+                        <div>
+                            <img src="https://m.media-amazon.com/images/I/81bNiiPk68L.SL1500.jpg" alt="e3">
+                        </div>
+                </div>
+                
+                </div>
+                <div>
+                    <h3>Redmi sonic boss Earphone2</h3><br>
+                    <div class="buttonview">56% off</div>
+                    <div class="price">
+                        <div>
+                            <p>₹1299</p>
+                            <s style="color: rgb(214, 218, 216);">₹2999</s>
+                        </div>
+                        <div>
+                            <img src="https://m.media-amazon.com/images/I/61HZLDc2ykL.SL1500.jpg" alt="e4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="extra">
+                <div>
+                    <h2 style="color: black;">Save Up to 65% on Charges & Cables</h2>
+                    <p>Free Delivery on all product</p>
+                    <button>Buy Now</button>
+                </div>
+                <div>
+                    <img src="https://img.pikbest.com/wp/202408/heart-illustration-in-need-of-a-recharge-3d-low-battery-with-charging-cable_9759211.jpg!sw800" alt="love">
+                </div>
+            </div>
+            <div class="stack">
+                <div>
+                    <h3>Xiomi Adopter 120W</h3><br>
+                    <div class="buttonview">25% off</div>
+                    <div class="price">
+                        <div>
+                            <p>₹2449</p>
+                            <s style="color: rgb(214, 218, 216);">₹5199</s>
+                        </div>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/2507/3278/files/2_port_usb_charger.png?v=1687466576" alt="e1">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Mi 2A Charger with Cable</h3><br>
+                    <div class="buttonview">25% off</div>
+                    <div class="price">
+                        <div>
+                            <p>₹459</p>
+                            <s style="color: rgb(214, 218, 216);">₹999</s>
+                        </div>
+                        <div>
+                            <img src="https://i.pinimg.com/originals/70/ba/db/70badb0f535d08ecb7e2fe9be9cfbd42.png" alt="e2">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Xiomi sony2.0 Cable</h3><br>
+                    <div class="buttonview">64% off</div>
+                    <div class="price">
+                        <div>
+                            <p>₹249</p>
+                            <s style="color: rgb(214, 218, 216);">₹699</s>
+                        </div>
+                        <div>
+                            <img src="https://www.jiomart.com/images/product/original/rvwaklfgxm/bopud-all-in-one-charger-micro-data-cables-3-in-1-charging-cable-can-support-android-type-c-and-ios-mobile-phone-devices-this-charging-cable-is-designed-for-charging-the-devices-quickly-product-images-orvwaklfgxm-p598565523-0-202302192215.jpg?im=Resize=(420,420)" alt="e3">
+                        </div>
+                </div>
+                
+                </div>
+                <div>
+                    <h3>Mi dual port Charger</h3><br>
+                    <div class="buttonview">35% off</div>
+                    <div class="price">
+                        <div>
+                            <p>₹899</p>
+                            <s style="color: rgb(214, 218, 216);">₹1299</s>
+                        </div>
+                        <div>
+                            <img src="https://images-cdn.ubuy.co.in/6545a5a75d1e094b60085e59-air-flying-wing-usb-charger-charging.jpg" alt="e4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+
+        
+    </div>
+</body>
+</html>
