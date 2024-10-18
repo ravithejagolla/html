@@ -1,0 +1,211 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umso</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0b0d;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        .login {
+            border: 1px solid gray;
+            padding: 5px 15px;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: #ffffff;
+                color: #0b0b0d;
+            }
+        }
+
+        .signup {
+            border: 1px solid gray;
+            padding: 5px 15px;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: #ffffff;
+                color: #0b0b0d;
+            }
+        }
+
+        .main-content {
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .agw {
+            color: #7a5cff;
+        }
+
+        p {
+            font-size: 18px;
+            color: #b0b0b0;
+            margin: 20px 0 40px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 70px 0 70px 30vw;
+            border-radius: 30px;
+            width: 605px;
+            box-shadow: 0 0 15px rgba(128, 0, 255, 0.6), 0 0 30px rgba(128, 0, 255, 0.4);
+        }
+
+        input {
+            width: 450px;
+            padding: 15px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 0 30px 30px 0;
+            background-color: #7a5cff;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .reviews {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #b0b0b0;
+        }
+
+        .stars {
+            color: #00c853;
+            margin: 0 10px 5px 6px;
+        }
+
+        .trustpilot {
+            height: 23px;
+            margin-left: 10px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            color: #b0b0b0;
+        }
+
+        .made-by {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 180px;
+            padding: 8px 0;
+            color: #000;
+            background-color: #ffffff;
+            font-size: 16px;
+            margin-left: 43vw;
+            border-radius: 10px;
+            box-shadow: rgba(255, 255, 255) 0px 2px 8px 0px;
+        }
+        .navbar>img{
+            width:100px;
+            height: 100px;
+            border-color: #0b0b0d;
+            border-radius: 100px;
+            padding-right: 40px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img class="logo" alt="Company Logo" src="data:image/png;base64,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" width="120" height="100" />
+        <div>
+            <a href="#">
+                Pricing
+            </a>
+            <a href="#">
+                Features
+            </a>
+            <a href="#">
+                Showcase
+            </a>
+            <a class="login" href="#">
+                Login
+            </a>
+            <a class="signup" href="#">
+                Sign Up →
+            </a>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>
+            Get your </h1>
+        <h1 class="agw">
+            AI Generated Website
+        </h1>
+        <h1>In Seconds
+        </h1>
+        <p>
+            Give it a try right below, without having to sign up!
+        </p>
+        <div class="search-bar">
+            <input placeholder="Vegan Pizza Restaurant in" type="text" />
+            <button>
+                Generate ✨
+            </button>
+        </div>
+        <div class="reviews">
+            <span>
+                Excellent
+            </span>
+            <span class="stars">
+                ★★★★★
+            </span>
+            <span>
+                4.8 out of 5 based on 85 reviews
+            </span>
+        </div>
+    </div>
+    <div class="footer">
+        <span class="made-by">
+            Made by<img src="data:image/png;base64,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" alt="umso-logo" height="25px" width="80px">
+        </span>
+    </div>
+</body>
+
+</html>
