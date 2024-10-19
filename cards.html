@@ -26,25 +26,36 @@
             width:100px;
             height: 120px;
             background-color:#fff8c5;
-            border: 2px solid black;
+            
         }
         .box:nth-child(2){
             width:100px;
             height: 120px;
             background-color: #8250df;
-            border: 2px solid black;
+           
         }
-        .box:nth-child(3){
+        div:nth-child(3){
             width:100px;
             height: 120px;
             background-color:#d1242f;
-            border: 2px solid black;
+            cursor: pointer;
         }
         .box:nth-child(4){
             width: 100px;
             height: 120px;
             background-color: #1f883d;
         }
+        .box:nth-child(3):hover ~ .box:nth-child(4) {
+            cursor: pointer;
+            background-color: rgb(75, 2, 2);
+        }
+        .box:nth-child(3):hover ~ .box:nth-child(2) {
+            width: 100px;
+            height: 120px;
+            background-color: aqua;
+
+        }
+
     </style>
 </head>
 <body>
