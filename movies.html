@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Booking</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 5% 2%;
+      }
+
+      .main > div {
+        width: 20%;
+        border: 1px solid #ddd;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        background-color: white;
+        text-align: center;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.2s;
+      }
+
+      .main > div:hover {
+        transform: scale(1.05);
+      }
+
+      .main img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 300px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        margin: 10px 0;
+      }
+
+      p {
+        font-size: 1.2em;
+        margin: 5px 0;
+      }
+
+      button {
+        width: 60%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        background-color: rgb(135, 204, 244);
+        border: none;
+        border-radius: 5px;
+        color: black;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: rgb(90, 180, 220);
+      }
+
+      @media (max-width: 768px) {
+        .main > div {
+          width: 45%; 
+        }
+      }
+
+      @media (max-width: 480px) {
+        .main > div {
+          width: 90%; 
+        }
+
+        h1 {
+          font-size: 1.2em;
+        }
+
+        p {
+          font-size: 1em;
+        }
+
+        button {
+          font-size: 1em;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div>
+        <img
+          src="https://assetscdn1.paytm.com/images/cinema/Doctor-Strange--In-The-Multiverse-Of-Madness-r-705x750-36f0e140-b752-11ec-a762-319bdb0970f2.jpg"
+          alt="Marvel Studios"
+        />
+        <h1>Doctor Strange 2</h1>
+        <p>Rating: 4.5</p>
+        <button>Book Now</button>
+      </div>
+      <div>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSog0Vd0R4IxW_k4m0J5pU0Y7naF6NS_WXj_Q&s"
+          alt="BhoolBhulaiyaa2"
+        />
+        <h1>BhoolBhulaiyaa2</h1>
+        <p>Rating: 4.5</p>
+        <button>Book Now</button>
+      </div>
+      <div>
+        <img
+          src="https://m.media-amazon.com/images/M/MV5BNWYxYzhlOTQtMzk5ZC00MjBkLWIyMDAtYTJmN2Y3OGJiN2RhXkEyXkFqcGc@._V1_.jpg"
+          alt="jayeshbhai jordaar"
+        />
+        <h1>Jayeshbhai Jordaar</h1>
+        <p>Rating: 4.5</p>
+        <button>Book Now</button>
+      </div>
+      <div>
+        <img
+          src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQORE3CAXYlCfztvXOPmSZ410m2olvVX-PO0WRBTXibUeqH1PNIPuS1nD1S595yEXudHaHDXA"
+          alt="jurassic world"
+        />
+        <h1>Jurassic World</h1>
+        <p>Rating: 4.5</p>
+        <button>Book Now</button>
+      </div>
+      <div>
+        <img
+          src="https://i.pinimg.com/originals/8c/59/8e/8c598e23041ab30f831e8ae8ecb3ac8a.jpg"
+          alt="Kalki2898AD"
+        />
+        <h1>Kalki2898AD</h1>
+        <p>Rating: 4.5</p>
+        <button>Book Now</button>
+      </div>
+      <div>
+        <img
+          src="https://m.media-amazon.com/images/M/MV5BZWEwNmYwYTAtMmQxYS00ZTgwLWE0NmUtNGIwZDEyZmYwN2EwXkEyXkFqcGc@._V1_.jpg"
+          alt="Devarapng"
+        />
+        <h1>Devara</h1>
+        <p>Rating: 4.8</p>
+        <button>Book Now</button>
+      </div>
+      <div>
+        <img
+          src="https://i.redd.it/kgf-1-is-better-than-kgf-2-change-my-mind-v0-p0ik48ot9ztc1.jpg?width=277&format=pjpg&auto=webp&s=ed35b4faeeef14a79c75d3876e49a01c94338ff8"
+          alt="kgf2"
+        />
+        <h1>KGF2</h1>
+        <p>Rating: 4.5</p>
+        <button>Book Now</button>
+      </div>
+      <div>
+        <img
+          src="https://m.media-amazon.com/images/I/71LZBkxZ3vL._AC_UF894,1000_QL80_.jpg"
+          alt="RRR"
+        />
+        <h1>RRR</h1>
+        <p>Rating: 4.8</p>
+        <button>Book Now</button>
+      </div>
+    </div>
+  </body>
+</html>
